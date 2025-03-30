@@ -1,0 +1,38 @@
+---
+import { IconBrandGithub, IconBrandTwitter } from '@tabler/icons-react';
+import Avatar from '../components/Avatar.astro';
+import Center from '../components/Center.astro';
+import Base from '../layouts/Base.astro';
+import SNSCard from '../components/SNSCard.astro';
+---
+
+<Base title="ポートフォリオ">
+  <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-2">
+      <Center>
+        <Avatar />
+      </Center>
+      <Center>
+        <h1 class="text-4xl font-semibold">名前</h1>
+      </Center>
+    </div>
+    <div class="flex flex-col gap-4">
+      <SNSCard
+        href="https://x.com/OpenTUT_info"
+        serviceName="Twitter"
+        userName="@OpenTUT_info"
+        description="Twitterリンク"
+      >
+        <IconBrandTwitter color="#1DA1F2" size={32} />
+      </SNSCard>
+      <SNSCard
+        href="https://github.com/OpenTUT"
+        serviceName="GitHub"
+        userName="OpenTUT"
+        description="GitHubリンク"
+      >
+        <IconBrandGithub color="#181818" size={32} />
+      </SNSCard>
+    </div>
+  </div>
+</Base>
